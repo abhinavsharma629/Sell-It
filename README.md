@@ -1,2 +1,1 @@
-# Deal-Minor
-"# Sell-It" 
+# Sell It
