@@ -96,10 +96,10 @@ export default class SellScreen extends Component {
         <ScrollView>
           <View style={{ marginLeft: 75 }}>
             <View style={{ flexDirection: "row" }}>
-              <Icon name="send-circle" size={50} />
+              <Icon name="send-circle" size={45} />
               <Text
                 style={{
-                  marginTop: 10,
+                  marginTop: 5,
                   marginLeft: 20,
                   fontSize: 30,
                   fontFamily: "Roboto",
@@ -140,9 +140,9 @@ export default class SellScreen extends Component {
             >
               <Image
                 style={{
-                  width: 400,
+                  width: 330,
                   height: 250,
-                  marginLeft: 15,
+                  marginLeft: 40,
                   borderRadius: 20,
                   marginTop: 10,
                   borderColor: "black",
@@ -194,7 +194,7 @@ export default class SellScreen extends Component {
                 borderRadius: 5,
                 backgroundColor: "#313340"
               }}
-              containerStyle={{ marginLeft: 50 }}
+              containerStyle={{ marginLeft: 30 }}
               onPress={this.submitData}
             />
           </View>
@@ -214,7 +214,7 @@ const styles = StyleSheet.create({
   loginFormTextInput: {
     height: 45,
     fontSize: 14,
-    width: 370,
+    width: 320,
     borderRadius: 5,
     borderWidth: 1,
     borderColor: "#eaeaea",
@@ -228,7 +228,7 @@ const styles = StyleSheet.create({
   loginFormTextInput1: {
     height: 100,
     fontSize: 14,
-    width: 370,
+    width: 320,
     borderRadius: 5,
     borderWidth: 1,
     borderColor: "#eaeaea",

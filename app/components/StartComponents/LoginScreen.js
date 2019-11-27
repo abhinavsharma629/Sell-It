@@ -163,7 +163,7 @@ export default class LoginScreen extends Component {
                       height: 37,
                       borderRadius: 7,
                       padding: 15,
-                      left: 150,
+                      left: 130,
                       top: 70
                     }}
                     source={require("../../required_images/logo.png")}
@@ -201,8 +201,8 @@ export default class LoginScreen extends Component {
                 >
                   <Text
                     style={{
-                      marginTop: 50,
-                      marginLeft: 210,
+                      marginTop: 30,
+                      marginLeft: 180,
                       fontWeight: "bold",
                       fontSize: 15
                     }}
@@ -213,9 +213,9 @@ export default class LoginScreen extends Component {
               </View>
             </View>
           </KeyboardAvoidingView>
-          <TouchableOpacity style={{ flex: 0.1 }} onPress={() =>{this.openUrl()}}>
+          <TouchableOpacity style={{ flex: 0.1}} onPress={() =>{this.openUrl()}}>
             <Text style={styles.instructions}>
-              Developers : Sahil , Soumya , Rashi{"\n"}
+              Developer : Abhinav Sharma{"\n"}
             </Text>
           </TouchableOpacity>
         </View>
@@ -279,7 +279,8 @@ const styles = StyleSheet.create({
   },
   buttonTouchable: {
     flex: 0.2,
-    padding: 16
+    padding: 16,
+    marginLeft:-25
   },
   loader: {
     alignItems: "center",

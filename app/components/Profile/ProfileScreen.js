@@ -24,6 +24,7 @@ import Icon from "react-native-vector-icons/Ionicons";
 import ViewMoreText from "react-native-view-more-text";
 import Modal from "react-native-modalbox";
 import { SearchBar } from "react-native-elements";
+import { StackActions, NavigationActions } from "react-navigation";
 
 export default class ProfileScreen extends Component {
   constructor(props) {
@@ -32,7 +33,7 @@ export default class ProfileScreen extends Component {
       searchedText: "",
       posts: [
         {
-          user: "Sahil Jain",
+          user: "Abhinav Sharma",
           img_url:
             "https://cdn.shopify.com/s/files/1/0304/3821/products/2018-Curren-Mens-Watches-Top-Brand-Luxury-Brown-Leather-Strap-Quartz-Watch-Men-Military-Sport-Waterproof_1200x1200.jpg?v=1530781405",
           created_at: "12-11-19",
@@ -42,7 +43,7 @@ export default class ProfileScreen extends Component {
           Price: "₹ 2500"
         },
         {
-          user: "Sahil Jain",
+          user: "Abhinav Sharma",
           img_url: "https://www.ergoflex.com.au/graphics/Ergo_-093-m.jpg",
           created_at: "02-08-19",
           desc:
@@ -94,6 +95,36 @@ export default class ProfileScreen extends Component {
     }
   }
 
+async logoutUser () {
+  await AsyncStorage.clear();
+  const resetAction = StackActions.reset({
+    index: 0,
+    actions: [
+      NavigationActions.navigate({
+        routeName: "Login",
+      })
+    ]
+  });
+  this.props.screenProps.rootNav.dispatch(resetAction);
+}
+
+  callLogout = () =>{
+    Alert.alert(
+  'Logout',
+  'Are You Sure You Want To Logout?',
+  [
+
+    {
+      text: 'Cancel',
+      onPress: () => console.log('Cancel Pressed'),
+      style: 'cancel',
+    },
+    {text: 'OK', onPress: () => {this.logoutUser()}},
+  ],
+  {cancelable: false},
+);
+  }
+
   getProfileData() {
     return (
       <View
@@ -103,10 +134,12 @@ export default class ProfileScreen extends Component {
           elevation: 20,
           borderBottomLeftRadius: 20,
           borderBottomRightRadius: 20,
-          marginTop: 10
+
         }}
       >
+
         <View style={{ flexDirection: "row" }}>
+        <TouchableOpacity onLongPress={() =>{this.callLogout()}}>
           <Image
             style={{
               width: 100,
@@ -120,24 +153,25 @@ export default class ProfileScreen extends Component {
             }}
             source={{
               uri:
-                "https://scontent.fbho1-1.fna.fbcdn.net/v/t1.0-9/41124568_1801651889948665_1391759537811226624_n.jpg?_nc_cat=101&_nc_ohc=EGLK0NXd-hUAQnnYT02_eZTPNp6-36R2l69qZS_RgJMt_HdeWGD1q8EmQ&_nc_ht=scontent.fbho1-1.fna&oh=4624d8389276519441d875a3b3fcce22&oe=5E431B93"
+                "https://scontent.fdel29-1.fna.fbcdn.net/v/t1.0-9/35812593_1663790273739991_4699217653783330816_n.jpg?_nc_cat=111&_nc_ohc=d9UkhjJOXyEAQlxBKdsCFsUZGWLKSxrVWhrV30nx6TII2IrM6ibLDFb1g&_nc_ht=scontent.fdel29-1.fna&oh=42a8adb3ad3ccea97dce346923a2d015&oe=5E7F8692"
             }}
           />
+          </TouchableOpacity>
           <View
             style={{
               flexDirection: "column",
               marginLeft: 20,
-              marginTop: 20
+              marginTop: 5
             }}
           >
             <View style={{ flexDirection: "column", marginTop: 10 }}>
-              <Text style={{ fontSize: 20, fontWeight: "bold" }}>
-                Sahil Jain
+              <Text style={{ fontSize: 18, fontWeight: "bold" }}>
+                Abhinav Sharma
               </Text>
-              <Text style={{ fontSize: 20, fontWeight: "bold", marginTop: 10 }}>
+              <Text style={{ fontSize: 18, fontWeight: "bold", marginTop: 10 }}>
                 Pending Items : {this.state.posts.length}
               </Text>
-              <Text style={{ fontSize: 20, fontWeight: "bold", marginTop: 10 }}>
+              <Text style={{ fontSize: 18, fontWeight: "bold", marginTop: 10 }}>
                 Sold Items : 0
               </Text>
             </View>

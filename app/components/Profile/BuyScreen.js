@@ -62,7 +62,7 @@ export default class BuyScreen extends Component {
               <Text
                 style={{
                   marginTop: 15,
-                  marginLeft: 50,
+                  marginLeft: 10,
                   fontSize: 30,
                   fontFamily: "Roboto",
                   fontWeight: "bold"
@@ -185,7 +185,7 @@ export default class BuyScreen extends Component {
           <Text />
           <Text />
 
-          <View style={{ flexDirection: "row", marginLeft: 110 }}>
+          <View style={{ flexDirection: "row", marginLeft: 100 }}>
             <RadioButton
               value="COD"
               status={this.state.checked === "first" ? "checked" : "unchecked"}
@@ -208,8 +208,8 @@ export default class BuyScreen extends Component {
           <Button
             containerStyle={{
               borderRadius: 10,
-              marginLeft: 100,
-              marginTop: 50,
+              marginLeft: 90,
+              marginTop: 40,
               width: 200
             }}
             title="           SHIP NOW           "

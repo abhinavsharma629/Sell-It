@@ -132,7 +132,7 @@ export default class SignupScreen extends Component {
     ];
     if (index === 0) {
       return (
-        <View style={{ flex: 1, marginLeft: 20, marginTop: 15 }}>
+        <View style={{ flex: 1, marginLeft: 20, marginTop: 5 }}>
           <ScrollView>
             <View style={{ marginLeft: 75 }}>
               <View style={{ flexDirection: "row" }}>
@@ -140,7 +140,7 @@ export default class SignupScreen extends Component {
                 <Text
                   style={{
                     marginTop: 15,
-                    marginLeft: 50,
+                    marginLeft: 40,
                     fontSize: 20,
                     fontFamily: "Roboto",
                     fontWeight: "bold"
@@ -463,14 +463,13 @@ export default class SignupScreen extends Component {
             <Text />
             <View style={{ flexDirection: "row", marginLeft: 110 }}>
               <Button
-
-                title="  Create    "
+                title="    Create    "
                 raised
                 buttonStyle={{
                   borderRadius: 5,
                   backgroundColor: "#313340"
                 }}
-                containerStyle={{ marginLeft: 50 }}
+                containerStyle={{ marginLeft: 40 }}
                 onPress={this.submitData}
               />
             </View>
@@ -622,7 +621,7 @@ export default class SignupScreen extends Component {
                   height: 40,
                   borderRadius: 10,
                   padding: 15,
-                  left: 125,
+                  left: 140,
                   top: 60,
                   borderColor: "black"
                 }}
@@ -672,7 +671,7 @@ const styles = StyleSheet.create({
     fontStyle: "italic",
     fontWeight: "bold",
     marginTop: 15,
-    marginLeft: 0,
+    marginLeft: 40,
     textAlign: "center"
   },
   logoText1: {

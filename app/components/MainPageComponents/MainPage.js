@@ -136,7 +136,7 @@ class App extends Component {
   render() {
     if(this.state.access_token){
     return (
-      <CreateContainer1 screenProps={{access_token:this.state.access_token, user:this.state.user, img_url:this.state.img_url }} />
+      <CreateContainer1 screenProps={{rootNav:this.props.navigation, access_token:this.state.access_token, user:this.state.user, img_url:this.state.img_url }} />
     );
   }
   else{

@@ -32,7 +32,7 @@ export default class HomeScreen extends Component {
       searchedText: "",
       posts: [
         {
-          user: "Soumya Mujhjia",
+          user: "Manika Sharma",
           img_url:
             "https://live.staticflickr.com/3054/2537261201_22fc75314b_b.jpg",
           created_at: "12-11-19",
@@ -42,7 +42,7 @@ export default class HomeScreen extends Component {
           Price: "₹ 2500"
         },
         {
-          user: "Rashi Dixit",
+          user: "Kriti Tyagi",
           img_url:
             "https://ak3.picdn.net/shutterstock/videos/3358673/thumb/1.jpg",
           created_at: "02-08-19",
@@ -52,7 +52,7 @@ export default class HomeScreen extends Component {
           Price: "₹ 3300"
         },
         {
-          user: "Sahil Jain",
+          user: "Aditya Agarwal",
           img_url:
             "https://s3.ap-south-1.amazonaws.com/www.cimg.in/images/2019/01/30/35/159322569_15488571241_large.jpg",
           created_at: "24-09-19",
@@ -62,7 +62,7 @@ export default class HomeScreen extends Component {
           Price: "₹ 15000"
         },
         {
-          user: "Abhishek Goyal",
+          user: "Shashwat Shukla",
           img_url:
             "https://i.ebayimg.com/00/s/MTAyNFg3Njg=/z/Ji8AAOSwfTlcfVP0/$_86.JPG",
           created_at: "14-08-19",
@@ -163,7 +163,7 @@ export default class HomeScreen extends Component {
             <TouchableOpacity>
               <View style={{ flexDirection: "row" }}>
                 <Button
-                  containerStyle={{ borderRadius: 10, marginLeft: 130 }}
+                  containerStyle={{ borderRadius: 10, marginLeft: 90 }}
                   title="             Buy It              "
                   onPress={() => {this.props.navigation.navigate('Buy', {
                     postDetails:post
@@ -191,7 +191,7 @@ export default class HomeScreen extends Component {
               marginBottom: 5,
               marginLeft: 30,
               backgroundColor: "transparent",
-              width: 400
+              width: 350
             }}
             showCancel={false}
           />

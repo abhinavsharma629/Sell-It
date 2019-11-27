@@ -126,10 +126,10 @@ export default class SplashScreen extends Component {
       <View style={styles.container}>
         <LogoLoader
           source={require("../../required_images/logo.png")}
-          style={{ marginLeft: 190, marginTop: 350, height:80, width:80 }}
+          style={{ marginLeft: 165, marginTop: 250, height:80, width:80 }}
         />
         <Text style={styles.productName}>DEAL</Text>
-        <Text style={styles.madeBy}>Under The Guidance Of Prof. Shishir Kumar</Text>
+        <Text style={styles.madeBy}>HYDRA</Text>
       </View>
     );
   }
@@ -143,7 +143,8 @@ const styles = StyleSheet.create({
   madeBy: {
     fontSize: 23,
     alignSelf: "center",
-    bottom: "-42%",
+    bottom: "-39%",
+    marginLeft:-10,
     fontFamily: "San Francisco",
     fontWeight: "bold"
   },
